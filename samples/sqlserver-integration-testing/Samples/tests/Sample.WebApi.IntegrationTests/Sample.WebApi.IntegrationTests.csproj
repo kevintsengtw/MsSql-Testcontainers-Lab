@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <!-- v3 的測試專案是獨立執行檔 -->
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Testcontainers.MsSql" />
+    <PackageReference Include="Respawn" />
+    <PackageReference Include="Dapper" />
+    <PackageReference Include="Microsoft.Data.SqlClient" />
+    <PackageReference Include="xunit.v3.mtp-v2" />
+    <PackageReference Include="AwesomeAssertions" />
+    <PackageReference Include="AutoFixture" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Sample.WebApi\Sample.WebApi.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 讓 Fixture 執行時能讀到資料庫結構 script -->
+    <None Include="..\..\database\**\*.sql" Link="database\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

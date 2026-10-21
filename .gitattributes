@@ -1,0 +1,13 @@
+# 公開程式碼與設定採 LF 行尾。
+* text=auto
+*.cs        text eol=lf diff=csharp
+*.csproj    text eol=lf
+*.props     text eol=lf
+*.slnx      text eol=lf
+*.json      text eol=lf
+*.sql       text eol=lf
+*.md        text eol=lf
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+*.log       text eol=lf
+*.ps1       text eol=lf

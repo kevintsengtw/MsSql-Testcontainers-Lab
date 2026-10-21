@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Samples/src/">
+    <Project Path="Samples/src/Sample.WebApi/Sample.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/Samples/tests/">
+    <Project Path="Samples/tests/Sample.WebApi.IntegrationTests/Sample.WebApi.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/Samples/database/">
+    <File Path="Samples/database/001_CreateTables.sql" />
+  </Folder>
+</Solution>

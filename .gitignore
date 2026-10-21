@@ -1,0 +1,13 @@
+bin/
+obj/
+TestResults/
+.vs/
+.idea/
+.vscode/
+.DS_Store
+*.user
+*.suo
+**/Properties/launchSettings.json
+.env
+.env.*
+!.env.example
